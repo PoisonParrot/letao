@@ -1,18 +1,86 @@
-@maincolor :#006699;
-*{
-  margin: 0;
-  padding: 0;
-}
-#header {
-  background-color: @maincolor;
-  height: 45px;
-  >h4{
-    color: #fff;
-    line-height: 45px;
-    text-align: center;
-    font-weight: normal;
+//引入公共样式
+@import "./base.less";
+
+//主体部分
+#main {
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  //导航部分
+  #nav {
+    padding: 0 10px;
+    img {
+      width: 100%;
+    }
   }
-  a{
-    color: #fff;
+
+  //广告区域
+  #banner {
+    padding: 0 10px;
+    img {
+      width: 100%;
+    }
+  }
+
+  //品牌专区
+  #brand {
+    .title {
+      a {
+        width: 100%;
+        display: block;
+        img {
+          width: 100%;
+
+        }
+      }
+    }
+    .content {
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  //运动专区
+  #sport, #woman, #man {
+    padding: 0 10px;
+    .title {
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .content {
+      .product {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 0 5px 10px 5px;
+        box-shadow: 0 0 2px #ccc;
+        img {
+          width: 100%;
+        }
+        .name {
+          color: #666;
+        }
+        .price {
+          font-size: 12px;
+          .newprice {
+            color: red;
+          }
+          .oldprice {
+            font-size: 12px;
+            color: #333;
+          }
+        }
+        .mui-btn {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }

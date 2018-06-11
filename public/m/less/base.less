@@ -1,0 +1,92 @@
+//主题色  变量
+@maincolor : #006699;
+* {
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+img{
+  vertical-align: middle;
+}
+body{
+  height: 100%;
+}
+//头部轮播图
+#header {
+  padding: 0;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  //top: -5px;
+  top: 0;
+  left: 0;
+  background-color: @maincolor;
+  height: 45px;
+  .fa-arrow-left{
+    color: #fff;
+  }
+  > h4 {
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+    font-weight: normal;
+  }
+  a {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #fff;
+    img {
+      width: 100%;
+    }
+  }
+
+  .fa-arrow-left{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+  .search-form{
+    padding: 5px 45px;
+    >input{
+      background-color: #fff;
+      //margin-bottom: 0;
+      text-align: left;
+    }
+  }
+}
+
+
+//主体部分
+#main{
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+//底部区域
+#footer {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: @maincolor;
+  a.active{
+    color: orange;
+  }
+  a {
+    height: 45px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    display: block;
+    span{
+      padding-top: 5px;
+      display: block;
+    }
+  }
+}

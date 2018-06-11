@@ -1,0 +1,62 @@
+//引入公共样式
+@import "./base.less";
+
+html, body {
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  .category {
+    height: 100%;
+    display: flex;
+    .category-left {
+      background-color: #ccc;
+      flex-basis: 80px;
+      ul {
+        text-align: center;
+        background-color: #fff;
+        li {
+          &.active {
+            background-color: #ccc;
+
+          }
+          border: 1px solid #888;
+          padding: 5px;
+        }
+      }
+    }
+    .category-right {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      .mui-scroll-wrapper {
+        height: 100%;
+        .mui-scroll {
+          height: 102%;
+          .content {
+            .mui-row {
+              padding: 0 10px;
+              background-color: #fff;
+              width: 100%;
+              > div {
+                text-align: center;
+                a {
+                  display: block;
+                  img {
+                    width: 100%;
+                  }
+                  span {
+                    color: #CCCCCC;
+                    display: block;
+                    margin: 5px auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
