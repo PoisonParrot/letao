@@ -40,7 +40,7 @@ Letao.prototype = {
             });
             window.localStorage.setItem('searchData', JSON.stringify(arr));
             that.queryHistory();
-            window.location.href='productlist.html';
+            window.location.href = 'productlist.html?search='+search+'';
         })
     },
 
@@ -49,8 +49,11 @@ Letao.prototype = {
     queryHistory: function () {
         //获取页面数据  利用模板引擎创建元素
         var arr = window.localStorage.getItem('searchData');
-        arr = JSON.parse(arr);
-        //console.log(arr);
+        if (arr && JSON.parse(arr).length > 0) {
+            arr = JSON.parse(arr);
+        } else {
+            var arr = [];
+        }
         var html = template('searchTmp', arr);
         $(".history ul").html(html);
     },
@@ -81,7 +84,6 @@ Letao.prototype = {
     clearHistory: function () {
         var that = this;
         $(".clear").click(function () {
-            console.log(1);
             window.localStorage.setItem('searchData', "");
             that.queryHistory();
         })

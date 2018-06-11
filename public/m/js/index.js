@@ -1,14 +1,14 @@
 /**
- * Created by ÂŞÓğ·æ on 2018/6/7.
+ * Created by ç½—ç¾½é”‹ on 2018/6/7.
  */
 
 
 $(function () {
-    //ÓÃº¯Êı·â×°     ÓÃ¶ÔÏóµÄ·½Ê½½øĞĞ·â×°
+    //ç”¨å‡½æ•°å°è£…     ç”¨å¯¹è±¡çš„æ–¹å¼è¿›è¡Œå°è£…
     var letao = new Letao();
-    //µ÷ÓÃÂÖ²¥Í¼²å¼ş
+    //è°ƒç”¨è½®æ’­å›¾æ’ä»¶
     letao.initslider();
-    //³õÊ¼»¯´°¿Ú¹ö¶¯
+    //åˆå§‹åŒ–çª—å£æ»šåŠ¨
     letao.initscroll();
 })
 var Letao = function () {
@@ -16,29 +16,29 @@ var Letao = function () {
 }
 Letao.prototype = {
     initslider: function () {
-        //»ñµÃslider²å¼ş¶ÔÏó
+        //è·å¾—slideræ’ä»¶å¯¹è±¡
         var gallery = mui('.mui-slider');
         gallery.slider({
-            interval: 3000//×Ô¶¯ÂÖ²¥ÖÜÆÚ£¬ÈôÎª0Ôò²»×Ô¶¯²¥·Å£¬Ä¬ÈÏÎª0£»
+            interval: 3000//è‡ªåŠ¨è½®æ’­å‘¨æœŸï¼Œè‹¥ä¸º0åˆ™ä¸è‡ªåŠ¨æ’­æ”¾ï¼Œé»˜è®¤ä¸º0ï¼›
         });
 
     },
-    //´°¿ÚÏÂÀ­
+    //çª—å£ä¸‹æ‹‰
     initscroll: function () {
-        //»ñµÃslider²å¼ş¶ÔÏó
+        //è·å¾—slideræ’ä»¶å¯¹è±¡
         var gallery = mui('.mui-slider');
         gallery.slider({
-            interval: 3000//×Ô¶¯ÂÖ²¥ÖÜÆÚ£¬ÈôÎª0Ôò²»×Ô¶¯²¥·Å£¬Ä¬ÈÏÎª0£»
+            interval: 3000//è‡ªåŠ¨è½®æ’­å‘¨æœŸï¼Œè‹¥ä¸º0åˆ™ä¸è‡ªåŠ¨æ’­æ”¾ï¼Œé»˜è®¤ä¸º0ï¼›
         });
-        //´°¿Ú¹ö¶¯³õÊ¼»¯
+        //çª—å£æ»šåŠ¨åˆå§‹åŒ–
         options = {
-            scrollY: true, //ÊÇ·ñÊúÏò¹ö¶¯
-            scrollX: false, //ÊÇ·ñºáÏò¹ö¶¯
-            startX: 0, //³õÊ¼»¯Ê±¹ö¶¯ÖÁx
-            startY: 0, //³õÊ¼»¯Ê±¹ö¶¯ÖÁy
-            indicators: true, //ÊÇ·ñÏÔÊ¾¹ö¶¯Ìõ
-            deceleration: 0.0006, //×èÄáÏµÊı,ÏµÊıÔ½Ğ¡»¬¶¯Ô½ÁéÃô
-            bounce: true //ÊÇ·ñÆôÓÃ»Øµ¯
+            scrollY: true, //æ˜¯å¦ç«–å‘æ»šåŠ¨
+            scrollX: false, //æ˜¯å¦æ¨ªå‘æ»šåŠ¨
+            startX: 0, //åˆå§‹åŒ–æ—¶æ»šåŠ¨è‡³x
+            startY: 0, //åˆå§‹åŒ–æ—¶æ»šåŠ¨è‡³y
+            indicators: true, //æ˜¯å¦æ˜¾ç¤ºæ»šåŠ¨æ¡
+            deceleration: 0.0006, //é˜»å°¼ç³»æ•°,ç³»æ•°è¶Šå°æ»‘åŠ¨è¶Šçµæ•
+            bounce: true //æ˜¯å¦å¯ç”¨å›å¼¹
         }
         mui('.mui-scroll-wrapper').scroll(options);
     }

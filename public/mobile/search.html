@@ -75,7 +75,7 @@
          <ul>
             {{each rows as value i}}
             <li>
-                <a href="productlist.html">
+                <a href="productlist.html?search={{value.search}}">
                     <span>{{value.search}}</span>
                     <!-- 把当前id存储在span上 点击到时候获取自身的data-id的值 -->
                     <span class="fa fa-times btn-delete" data-id="{{value.id}}"></span>
@@ -93,6 +93,7 @@
     <script src="lib/artTemplate/template.js"></script>
     <!-- 8. 引入分类的js文件 -->
     <script src="js/search.js"></script>
+    <!-- <script src="js/search1.js"></script> -->
 </body>
 
 </html>

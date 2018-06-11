@@ -46,7 +46,7 @@ Letao.prototype = {
                             $('.category-right .mui-row').html(html);
                         }else{
 
-                            $('.category-right .mui-row').html('<h6>ªÒ»°∏¸∂‡</h6>§ö');
+                            $('.category-right .mui-row').html('<h6>Ëé∑ÂèñÊõ¥Â§ö</h6>Óòø');
                         }
                     }
                 });
